@@ -1,0 +1,12 @@
+<h1>This is your todo list</h1>
+
+<%= link_to "Add a Task", new_task_path %>
+
+<% @tasks.each do |task| %>
+  <h3><%= link_to task.name, task_path(task) %></h3>
+  <p><%= task.description %></p>
+  <p><%= task.status = true ? "Done" : "To DO" %></p>
+  <p><%= task.created_at %></p>
+  <p><%= link_to "Delete", task_path(task), method: :delete, data: { confirm: "Are you sure?" } %></p>
+<% end %>
+

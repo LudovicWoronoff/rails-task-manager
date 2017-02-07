@@ -1,0 +1,6 @@
+<h1><%= @task.name %></h1>
+<p><%= @task.description %></p>
+<p><%= @task.status = true ? "Done" : "To DO" %></p>
+
+<p><%= link_to "Edit", edit_task_path(@task) %> <%= link_to "Back", tasks_path %></p>
+
